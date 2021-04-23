@@ -1,0 +1,32 @@
+@media (min-width:767.98px){
+    .about{
+        height: 500px;
+        display: flex;
+        align-items: center;
+    }
+    .about__row{
+        text-align: center;
+    }
+    .about__title{
+        margin: 0 0 20px;
+    }
+    .about__text p{
+        margin: 0 0 30px 0;
+    }
+}
+@media (max-width:767.98px){
+    .about{
+        height: 440px;
+        display: flex;
+        align-items: center;
+    }
+    .about__row{
+        text-align: center;
+    }
+    .about__title{
+        margin: 0 0 20px;
+    }
+    .about__text p{
+        margin: 0 0 30px 0;
+    }
+}

@@ -1,0 +1,74 @@
+//<Миксины>=======================
+// @import "mixins";
+//</Миксины>======================
+
+//<ШРИФТЫ>========================
+
+//<Подключаем шрифты>=============
+// &subset=cyrilic-ext
+@font-face {
+	font-family: 'Gilroy-Medium';
+	src: url('../fonts/Gilroy-Bold.eot');
+	src: local('☺'), url('../fonts/Gilroy-Bold.woff') format('woff'), url('../fonts/Gilroy-Bold.ttf') format('truetype'), url('../fonts/Gilroy-Bold.svg') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Gilroy-Bold';
+	src: url('../font/Gilroy-Medium.eot');
+	src: local('☺'), url('../font/Gilroy-Medium.woff') format('woff'), url('../font/Gilroy-Medium.ttf') format('truetype'), url('../font/Gilroy-Medium.svg') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+// @import "fonts";
+//</Подключаем шрифты>============
+
+//<Иконочные шрифты>=============
+@import "icons.scss";
+//</Иконочные шрифты>=============
+
+//<Шрифт по умолчанию>===========
+$font-family: 'Gilroy-Bold';
+//</Шрифт по умолчанию>===========
+
+//</ШРИФТЫ>
+
+// переменные
+$minWidth: 320px;
+$maxWidth: 1445;
+$maxWidthContainer: 943;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+//<Обнуление, общие параметры>=======================
+@import "nullPage.scss";
+//<Оболочка>
+.wrapper{
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	&._loaded{
+
+	}
+}
+//</Оболочка>========================================
+
+//<Основная сетка>==============
+._container{
+	max-width: $maxWidthContainer + px;
+	margin: 0 auto;
+	@media (max-width: $md1+px){
+		max-width: 970px;
+	}
+	@media (max-width: $md2+px){
+		max-width: 750;
+	}
+	@media (max-width: $md3+px){
+		max-width: none;
+		padding: 0 10px;
+	}
+}
